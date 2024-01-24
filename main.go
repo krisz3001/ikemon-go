@@ -23,6 +23,7 @@ func main() {
 	http.HandleFunc("/signup", Controller_Signup)
 	http.HandleFunc("/login", Controller_Login)
 	http.HandleFunc("/logout", Controller_Logout)
+	http.HandleFunc("/types", Controller_Types)
 
 	fmt.Println("Listening on port " + fmt.Sprint(PORT) + "...")
 	http.ListenAndServe(":"+fmt.Sprint(PORT), nil)
