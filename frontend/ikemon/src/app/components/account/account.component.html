@@ -1,0 +1,24 @@
+<table>
+    <caption><h2>Account details</h2></caption>
+    <tr>
+        <td>Username</td>
+        <td>{{user.Username}}</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>{{user.Email}}</td>
+    </tr>
+    <tr>
+        <td>Money</td>
+        <td>💰 {{user.Money}}</td>
+    </tr>
+    <tr>
+        <td>Admin?</td>
+        <td>{{user.Admin}}</td>
+    </tr>
+    <tr>
+        <td>Cards owned</td>
+        <td>{{cards_count}}</td>
+    </tr>
+</table>
+<app-card-list [userId]="user.UserId"></app-card-list>

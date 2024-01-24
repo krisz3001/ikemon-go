@@ -1,0 +1,58 @@
+:host {
+    background-color: rgba($color: #333, $alpha: 0.5);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background-color: teal;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px 2px black;
+}
+
+form * {
+    display: block;
+}
+
+input {
+    padding: 5px;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+button:hover {
+    color: white;
+    background-color: black;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,18 @@
+<div id="menu">
+    <h1><a routerLink="/">IKémon</a> | Home</h1>
+    <div id="menubar">
+        <div id="menu-buttons">
+            <button routerLink="login" class="btn" *ngIf="!user">Login</button>
+            <button class="btn" *ngIf="!user">Register</button>
+            <button class="btn" routerLink="">Home</button>
+            <button class="btn" routerLink="/account">Account</button>
+            <button class="btn" routerLink="/details">TESZT</button>
+        </div>
+    </div>
+</div>
+<div id="account-info" *ngIf="user">
+    <span>Logged in as: <a routerLink="account">{{user.Username}}</a></span>
+    <span>💰 {{user.Money}}</span>
+    <span>You have {{cards_count}} cards</span>
+    <span>Limit: LIMIT</span>
+</div>

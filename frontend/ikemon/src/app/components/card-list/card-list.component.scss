@@ -1,0 +1,72 @@
+:host {
+    margin: 0 auto;
+    width: 100vw;
+    padding: 10px;
+    flex: 1;
+    display: block;
+}
+
+@media (min-width: 850px) and (max-width: 1500px) {
+    :host {
+        margin: 0 auto;
+        max-width: 70%;
+    }
+}
+
+@media (min-width: 1501px) {
+    :host {
+        margin: 0 auto;
+        max-width: 50%;
+    }
+}
+
+#card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    gap: 30px;
+}
+
+#filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#filter-type {
+    margin-top: 10px;
+}
+
+select {
+    background-color: white;
+    border: 1px solid #333;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pager {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+.pager-active {
+    background-color: #333;
+    color: white;
+}

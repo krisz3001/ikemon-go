@@ -1,0 +1,21 @@
+<div class="pokemon-card">
+    <button class="btn-trade" title="Trade card"><span
+            class="material-symbols-outlined btn-trade-icon ">currency_exchange</span></button>
+    <a routerLink="/details" [queryParams]="{id: card.id}">
+        <div class="image clr-{{card.typename}}"><img [src]="card.image"></div>
+    </a>
+    <div class="details">
+        <h2><a routerLink="/details" [queryParams]="{id: card.id}">{{card.name}}</a></h2>
+        <span class="card-type"><span class="icon">🏷</span> {{card.typename}}</span>
+        <span class="attributes">
+            <span class="card-hp"><span class="icon">❤</span> {{card.hp}}</span>
+            <span class="card-attack"><span class="icon">⚔</span> {{card.attack}}</span>
+            <span class="card-defense"><span class="icon">🛡</span> {{card.defense}}</span>
+        </span>
+        <span>Owner: {{card.ownerid}}</span>
+    </div>
+    <div class="trade" *ngIf="!card.islocked">
+        <span class="card-price"><span class="icon">💰</span> {{card.price}}</span>
+    </div>
+    <span class="material-symbols-outlined locked-icon" title="In pending trade offer" *ngIf="card.islocked">lock</span>
+</div>

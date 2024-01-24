@@ -1,0 +1,13 @@
+<h3 id="filter">
+    <label for="filter-type">Filter by type</label>
+    <select id="filter-type" [(ngModel)]="selectedType" (ngModelChange)="SelectType($event)">
+        <option value="0">All</option>
+        <option [value]="type.typeid" *ngFor="let type of types">{{type.name}}</option>
+    </select>
+</h3>
+<div id="card-list">
+    <app-card *ngFor="let card of cards" [card]="card"></app-card>
+</div>
+<div class="pager">
+    <button *ngFor="let _ of pages; index as i" class="btn" [ngClass]="Active(i)" (click)="TurnPage(i)">{{i+1}}</button>
+</div>
